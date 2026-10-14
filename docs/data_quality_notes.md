@@ -134,3 +134,39 @@
 - Flug- und Hoteldatensätze wurden über eindeutige Reise-IDs ausgewählt.
 - Datensätze zu stornierten Reisen bleiben für weitere Analysen erhalten.
 - Die ursprünglichen CSV-Exporte liegen lokal unter data/raw und sind von Git ausgeschlossen.
+
+### User data validation / Prüfung der Nutzerdaten
+
+**English:**
+- No missing values were detected in the imported user columns.
+- birthdate and sign_up_date were converted to datetime without parsing failures.
+- No birthdates or sign-up dates occur after the reference date, 2023-07-28.
+- No sign-up date precedes the user's birthdate.
+- gender contains F, M and O; O means Other.
+- married and has_children contain only Boolean values.
+- Text checks found no blank values, surrounding whitespace or variants
+  differing only in capitalization and surrounding whitespace.
+- Age at the reference date ranges from 16 to 88, with a median of 41.
+- Birth year 2006 accounts for 233 users (3.88%) across 170 birthdates.
+  Its elevated frequency remains unexplained; these users are retained.
+- Home-airport coordinates are complete, within valid ranges and consistent
+  per airport. Actual locations have not been externally verified.
+- No selected user has a session on a calendar date before sign-up
+  within the analysis period.
+
+**Deutsch:**
+- In den eingelesenen Nutzerspalten wurden keine fehlenden Werte erkannt.
+- birthdate und sign_up_date wurden ohne Parsing-Fehler umgewandelt.
+- Keine Geburts- oder Anmeldedaten liegen nach dem Stichtag 28.07.2023.
+- Keine Anmeldung liegt vor dem Geburtsdatum.
+- gender enthält F, M und O; O bedeutet Other / Andere.
+- married und has_children enthalten ausschließlich boolesche Werte.
+- Die Textprüfung fand keine leeren Werte, äußeren Leerzeichen oder Varianten,
+  die sich nur durch Groß-/Kleinschreibung und äußere Leerzeichen unterscheiden.
+- Das Alter am Stichtag reicht von 16 bis 88 Jahren; der Median beträgt 41.
+- Der Jahrgang 2006 umfasst 233 Nutzer (3,88 %) mit 170 Geburtsdaten.
+  Seine erhöhte Häufigkeit bleibt ungeklärt; die Nutzer bleiben erhalten.
+- Heimatflughafen-Koordinaten sind vollständig, formal gültig und je Flughafen
+  konsistent. Die tatsächlichen Standorte wurden nicht extern geprüft.
+- Kein ausgewählter Nutzer hat im Analysezeitraum eine Session
+  an einem Kalendertag vor seiner Anmeldung.
