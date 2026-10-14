@@ -96,3 +96,41 @@
 - Die Analysegruppe umfasst 5.998 Nutzer und 49.211 Sessions.
 - Jeder ausgewählte Nutzer hat zwischen 8 und 12 Sessions.
 - Die Auswahl basiert auf den Sessions vor weiteren Bereinigungen.
+
+### Missing booking details in the analysis group
+### Fehlende Buchungsdetails in der Analysegruppe
+
+**English:**
+- Flight: 50 of 14,320 sessions marked as booked lack matching details (about 0.35%).
+- Hotel: 193 of 14,919 sessions marked as booked lack matching details (about 1.29%).
+- Counts refer to sessions, not distinct trips or users.
+- Sessions are retained for now; missing details remain missing values.
+
+**Deutsch:**
+- Flug: Bei 50 von 14.320 als gebucht markierten Sessions fehlen passende Details (ca. 0,35 %).
+- Hotel: Bei 193 von 14.919 als gebucht markierten Sessions fehlen passende Details (ca. 1,29 %).
+- Die Zahlen beziehen sich auf Sessions, nicht auf unterschiedliche Reisen oder Nutzer.
+- Die Sessions bleiben vorerst erhalten; fehlende Details bleiben fehlende Werte.
+
+### CSV export validation / Prüfung der CSV-Exporte
+
+| Table / Tabelle | Exported rows / Exportierte Zeilen |
+|---|---:|
+| users | 5,998 |
+| sessions | 49,211 |
+| flights | 13,717 |
+| hotels | 14,313 |
+
+**English:**
+- All exported row counts match the SQL results.
+- Primary keys contain no missing or duplicate values.
+- Flight and hotel records were selected using distinct trip IDs.
+- Records linked to cancelled trips are retained for further analysis.
+- Original CSV exports are stored locally in data/raw and excluded from Git.
+
+**Deutsch:**
+- Alle exportierten Zeilenzahlen stimmen mit den SQL-Ergebnissen überein.
+- Die Primärschlüssel enthalten keine fehlenden oder doppelten Werte.
+- Flug- und Hoteldatensätze wurden über eindeutige Reise-IDs ausgewählt.
+- Datensätze zu stornierten Reisen bleiben für weitere Analysen erhalten.
+- Die ursprünglichen CSV-Exporte liegen lokal unter data/raw und sind von Git ausgeschlossen.
