@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Local project data
+data/
+
+# Local VS Code settings
+.vscode/
