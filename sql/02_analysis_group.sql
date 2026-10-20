@@ -24,6 +24,14 @@ analysis_group as (
     where session_count > 7
 )
 
+select
+    count(*) as user_count,
+    sum(session_count) as session_count,
+    min(session_count) as min_sessions_per_user,
+    max(session_count) as max_sessions_per_user
+from analysis_group;
+
+
 
 
 -- check missing booking details within the selected analysis group
