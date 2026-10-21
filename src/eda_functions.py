@@ -18,13 +18,13 @@ def raw_data_overview(df, name, key=None, preview_rows=5):
             "Rows",
             "Columns",
             "Duplicate rows — Additional occurrences",
-            "Memory usage (MB)",
+            
         ],
         "value": [
             f"{len(df):,}",
             f"{len(df.columns):,}",
             f"{df.duplicated().sum():,}",
-            f"{df.memory_usage(deep=True).sum() / 1024**2:.2f}",
+            
         ],
     })
 
